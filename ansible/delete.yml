@@ -1,0 +1,12 @@
+- name: Ansible test
+  hosts: localhost
+  tasks:
+        - name: Delete AWS instance using Ansible
+          amazon.aws.ec2_instance:
+            state: absent
+            instance_ids:
+              - i-0be4e6d9632e59856
+            region: us-east-1
+            key_name: mainkey
+            aws_access_key: AKIAXU4WWEMM5GHM5N2S
+            aws_secret_key: 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

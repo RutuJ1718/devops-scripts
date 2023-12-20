@@ -1,0 +1,14 @@
+- name: Ansible test
+  hosts: localhost
+  tasks:
+        - name: launching AWS instance using Ansible
+          amazon.aws.ec2_instance:
+            key_name: mainkey
+            instance_type: t2.micro
+            image_id: ami-0fc5d935ebf8bc3bc
+            region: us-east-1
+            network:
+              assign_public_ip: true
+            aws_access_key: AKIAXU4WWEMM5GHM5N2S
+            aws_secret_key: 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
+            
