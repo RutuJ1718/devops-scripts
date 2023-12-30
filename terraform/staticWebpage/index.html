@@ -1,0 +1,88 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutu's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for the profile image */
+        #profile-image {
+            border-radius: 50%;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Animation for projects and reviews */
+        .project, .review {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .project:hover, .review:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Rutu's Portfolio</h1>
+        <p>Welcome to my portfolio website. Check out my projects and reviews!</p>
+
+        <!-- Profile Image -->
+        <img id="profile-image" src="https://myterraformprojectwebsite1718.s3.amazonaws.com/profile.png" alt="Rutu's Profile">
+    </header>
+
+    <section id="projects">
+        <h2 style="color: #3498db;">Projects</h2>
+
+        <!-- Project 1 -->
+        <div class="project">
+            <img src="project1.jpg" alt="Project 1">
+            <h3>Project 1 Title</h3>
+            <p>Description of Project 1.</p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+            <img src="project2.jpg" alt="Project 2">
+            <h3>Project 2 Title</h3>
+            <p>Description of Project 2.</p>
+        </div>
+
+        <!-- Add more projects as needed -->
+
+    </section>
+
+    <section id="reviews" style="background-color: #ecf0f1;">
+        <h2 style="color: #2ecc71;">Reviews</h2>
+
+        <!-- Review 1 -->
+        <div class="review">
+            <img src="client1.jpg" alt="Client 1">
+            <h3>Client 1</h3>
+            <p>"Rutu did an excellent job on our project. His attention to detail and creativity are top-notch."</p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review">
+            <img src="client2.jpg" alt="Client 2">
+            <h3>Client 2</h3>
+            <p>"We were impressed with Rutu's professionalism and timely delivery. Highly recommended!"</p>
+        </div>
+
+        <!-- Add more reviews as needed -->
+
+    </section>
+
+    <footer style="background-color: #333; color: #fff;">
+        <p>&copy; 2023 Rutu's Portfolio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
