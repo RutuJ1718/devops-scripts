@@ -1,88 +1,121 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rutu's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Additional styles for the profile image */
-        #profile-image {
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 1em;
+            text-align: center;
+            animation: slideInDown 1s ease;
+        }
+
+        header img {
             border-radius: 50%;
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
+            max-width: 150px;
+            max-height: 150px;
+            margin-top: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
-        /* Animation for projects and reviews */
-        .project, .review {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        section {
+            padding: 2em;
+            text-align: center;
+            animation: fadeIn 1s ease;
         }
 
-        .project:hover, .review:hover {
+        .project {
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid #bdc3c7;
+            border-radius: 8px;
+            background-color: #ecf0f1;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 1em;
+            text-align: center;
+            animation: slideInUp 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
+        <img src="path/to/profile-picture.jpg" alt="Rutu's Profile Picture">
         <h1>Rutu's Portfolio</h1>
-        <p>Welcome to my portfolio website. Check out my projects and reviews!</p>
-
-        <!-- Profile Image -->
-        <img id="profile-image" src="https://myterraformprojectwebsite1718.s3.amazonaws.com/profile.png" alt="Rutu's Profile">
+        <p>Welcome aboard! Take a tour of my portfolio to discover the range of my creative endeavors</p>
     </header>
 
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello, I'm Rutu! A dedicated Cloud and DevOps Engineer with a passion for building robust and scalable solutions. I thrive on the convergence of technology and efficiency, ensuring that applications not only function seamlessly but also deliver exceptional user experiences. Let me take you through my journey.</p>
+    </section>
+
     <section id="projects">
-        <h2 style="color: #3498db;">Projects</h2>
-
-        <!-- Project 1 -->
+        <h2>Projects</h2>
         <div class="project">
-            <img src="project1.jpg" alt="Project 1">
-            <h3>Project 1 Title</h3>
-            <p>Description of Project 1.</p>
+            <h3>Scalable Cloud Infrastructure for E-commerce Platform</h3>
+            <p>Designed and implemented a scalable and highly available cloud infrastructure for an e-commerce platform, ensuring optimal performance during peak traffic.</p>
         </div>
-
-        <!-- Project 2 -->
         <div class="project">
-            <img src="project2.jpg" alt="Project 2">
-            <h3>Project 2 Title</h3>
-            <p>Description of Project 2.</p>
+            <h3>Infrastructure as Code (IaC) Implementation</h3>
+            <p>Implemented Infrastructure as Code using Terraform to automate the provisioning of infrastructure components, fostering consistency and reducing manual errors.</p>
         </div>
-
         <!-- Add more projects as needed -->
-
     </section>
 
-    <section id="reviews" style="background-color: #ecf0f1;">
-        <h2 style="color: #2ecc71;">Reviews</h2>
-
-        <!-- Review 1 -->
-        <div class="review">
-            <img src="client1.jpg" alt="Client 1">
-            <h3>Client 1</h3>
-            <p>"Rutu did an excellent job on our project. His attention to detail and creativity are top-notch."</p>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="review">
-            <img src="client2.jpg" alt="Client 2">
-            <h3>Client 2</h3>
-            <p>"We were impressed with Rutu's professionalism and timely delivery. Highly recommended!"</p>
-        </div>
-
-        <!-- Add more reviews as needed -->
-
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me via email at rutujokhakar@gmail.com</p>
     </section>
 
-    <footer style="background-color: #333; color: #fff;">
+    <footer>
         <p>&copy; 2023 Rutu's Portfolio. All rights reserved.</p>
     </footer>
 
 </body>
 </html>
-
