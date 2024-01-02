@@ -13,4 +13,3 @@ variable "Size" {
     default = "t2.micro"
     description = "This is my EC2 Instance Size"
 }
- 
