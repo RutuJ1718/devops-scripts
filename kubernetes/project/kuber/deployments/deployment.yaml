@@ -1,0 +1,47 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: myjob
+spec:
+  ttlSecondsAfterFinished: 100
+  template:
+    spec:
+      containers:
+        - name: pi
+          image: demo3
+          imagePullPolicy: Never
+      restartPolicy: Never
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: example-deploy
+#   labels:
+#     app: example-app
+# spec:
+#   selector:
+#     matchLabels:
+#       app: example-app
+#   replicas: 2
+#   # strategy:
+#   #   type: RollingUpdate
+#   #   rollingUpdate:
+#   #     maxSurge: 1
+#   #     maxUnavailable: 0
+#   template:
+#     metadata:
+#       labels:
+#         app: example-app
+#     spec:
+#       containers:
+#         - name: example-app
+#           image: demo3
+#           imagePullPolicy: Never
+#           # ports:
+#           #   - containerPort: 5000
+#           resources:
+#             requests:
+#               memory: "64Mi"
+#               cpu: "50m"
+#             limits:
+#               memory: "256Mi"
+#               cpu: "500m"

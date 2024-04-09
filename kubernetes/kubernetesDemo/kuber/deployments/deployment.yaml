@@ -1,0 +1,14 @@
+#kubernetes deployment file
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: myjob
+spec:
+  ttlSecondsAfterFinished: 100
+  template:
+    spec:
+      containers:
+        - name: pi
+          image: demo
+          imagePullPolicy: Never
+      restartPolicy: Never
