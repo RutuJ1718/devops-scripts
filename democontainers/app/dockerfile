@@ -1,0 +1,12 @@
+#docker file to create container
+FROM python:3.11.2-slim
+
+RUN mkdir -p /app
+
+WORKDIR /app
+
+COPY ./webserver.py /app/
+
+EXPOSE 8080
+
+CMD [ "python3", "webserver.py" ]
